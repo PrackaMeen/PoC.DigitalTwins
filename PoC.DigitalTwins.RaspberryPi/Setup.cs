@@ -11,9 +11,9 @@ namespace PoC.DigitalTwins.RaspberryPi
     {
         public Setup()
         {
-            DHP11 = new DHP11();
+            DHT11 = new DHT11();
         }
 
-        public DHP11 DHP11 { get; set; }
+        public DHT11 DHT11 { get; set; }
     }
 }

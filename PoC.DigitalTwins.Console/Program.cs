@@ -7,7 +7,7 @@ var raspberryPi = new PoC.DigitalTwins.RaspberryPi.Setup();
 bool isESC = false;
 while (!isESC)
 {
-    Console.WriteLine(raspberryPi.DHP11);
+    Console.WriteLine(raspberryPi.DHT11);
     var key = Console.ReadKey();
     isESC = ConsoleKey.Escape == key.Key;
 }

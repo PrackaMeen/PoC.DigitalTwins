@@ -5,8 +5,7 @@
     using PoC.DigitalTwins.RaspberryPi.Components.Mocks.Models;
     using Xunit;
 
-    [Trait("UnitTest", "UnitTest")]
-    public class DHP11Tests
+    public class DHT11Tests
     {
         [InlineData(0, 0, 100, 0, 0)]
         [InlineData(0.25, 0, 100, 25, 25)]
@@ -29,14 +28,14 @@
             var rangeCalculator = Substitute.For<RangeCalculator>();
             rangeCalculator.GetCoeficientBetween0and1.Returns(coeficient);
 
-            var dhp11 = new DHP11(
+            var dht11 = new DHT11(
                 rangeCalculator, 
                 temperatureRange: temperatureRangeConfig, 
                 humidityRange: humidityRangeConfig
             );
 
-            Assert.Equal(expectedTemperature, dhp11.GetTemperature());
-            Assert.Equal(expectedHumidity, dhp11.GetHumidity());
+            Assert.Equal(expectedTemperature, dht11.GetTemperature());
+            Assert.Equal(expectedHumidity, dht11.GetHumidity());
         }
     }
 }
