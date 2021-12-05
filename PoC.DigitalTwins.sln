@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.Console", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.RaspberryPi", "PoC.DigitalTwins.RaspberryPi\PoC.DigitalTwins.RaspberryPi.csproj", "{CC894400-9F4B-404B-8D3B-47DA8FEC9A1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.RaspberryPi.Tests", "PoC.DigitalTwins.RaspberryPi.Tests\PoC.DigitalTwins.RaspberryPi.Tests.csproj", "{D8B436BB-847A-41D7-96D5-3765D9C1715F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.RaspberryPi.Tests", "PoC.DigitalTwins.RaspberryPi.Tests\PoC.DigitalTwins.RaspberryPi.Tests.csproj", "{B683C73C-991D-433C-B9F4-79634DB96DEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{CC894400-9F4B-404B-8D3B-47DA8FEC9A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC894400-9F4B-404B-8D3B-47DA8FEC9A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC894400-9F4B-404B-8D3B-47DA8FEC9A1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8B436BB-847A-41D7-96D5-3765D9C1715F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8B436BB-847A-41D7-96D5-3765D9C1715F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8B436BB-847A-41D7-96D5-3765D9C1715F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8B436BB-847A-41D7-96D5-3765D9C1715F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B683C73C-991D-433C-B9F4-79634DB96DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B683C73C-991D-433C-B9F4-79634DB96DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B683C73C-991D-433C-B9F4-79634DB96DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B683C73C-991D-433C-B9F4-79634DB96DEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
