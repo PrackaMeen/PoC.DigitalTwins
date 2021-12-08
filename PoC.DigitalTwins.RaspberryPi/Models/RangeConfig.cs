@@ -1,4 +1,4 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Mocks.Models
+﻿namespace PoC.DigitalTwins.RaspberryPi.Models
 {
     public class RangeConfig
     {

@@ -1,7 +1,7 @@
 ﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Mocks
 {
     using PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
-    using PoC.DigitalTwins.RaspberryPi.Components.Mocks.Models;
+    using PoC.DigitalTwins.RaspberryPi.Models;
 
     public class DHT11 : IThermometer, IHygroscope
     {
@@ -43,12 +43,12 @@
 
         public double GetTemperatureInCelsius()
         {
-            return _rangeCalculator.GetValueFromRange(_temperatureRange);
+            return _rangeCalculator.GetValueFromRangeBy(_temperatureRange);
         }
 
         public double GetHumidityInPercent()
         {
-            return _rangeCalculator.GetValueFromRange(_humidityRange);
+            return _rangeCalculator.GetValueFromRangeBy(_humidityRange);
         }
 
         public double GetHumidity()
