@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.Console", "PoC.DigitalTwins.Console\PoC.DigitalTwins.Console.csproj", "{98361AE2-53F6-4623-B109-E74EDBEFB1F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.DigitalTwins.Console", "PoC.DigitalTwins.Console\PoC.DigitalTwins.Console.csproj", "{98361AE2-53F6-4623-B109-E74EDBEFB1F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.RaspberryPi", "PoC.DigitalTwins.RaspberryPi\PoC.DigitalTwins.RaspberryPi.csproj", "{CC894400-9F4B-404B-8D3B-47DA8FEC9A1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.DigitalTwins.RaspberryPi", "PoC.DigitalTwins.RaspberryPi\PoC.DigitalTwins.RaspberryPi.csproj", "{CC894400-9F4B-404B-8D3B-47DA8FEC9A1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.RaspberryPi.Tests", "PoC.DigitalTwins.RaspberryPi.Tests\PoC.DigitalTwins.RaspberryPi.Tests.csproj", "{B683C73C-991D-433C-B9F4-79634DB96DEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.DigitalTwins.RaspberryPi.Tests", "PoC.DigitalTwins.RaspberryPi.Tests\PoC.DigitalTwins.RaspberryPi.Tests.csproj", "{B683C73C-991D-433C-B9F4-79634DB96DEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.Functions", "PoC.DigitalTwins.Functions\PoC.DigitalTwins.Functions.csproj", "{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{B683C73C-991D-433C-B9F4-79634DB96DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B683C73C-991D-433C-B9F4-79634DB96DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B683C73C-991D-433C-B9F4-79634DB96DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
