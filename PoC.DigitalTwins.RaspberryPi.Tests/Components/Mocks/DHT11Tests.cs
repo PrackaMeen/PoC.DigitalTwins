@@ -2,7 +2,7 @@
 {
     using NSubstitute;
     using PoC.DigitalTwins.RaspberryPi.Components.Mocks;
-    using PoC.DigitalTwins.RaspberryPi.Components.Mocks.Models;
+    using PoC.DigitalTwins.RaspberryPi.Models;
     using Xunit;
 
     public class DHT11Tests

@@ -3,7 +3,7 @@
     using Xunit;
     using NSubstitute;
     using PoC.DigitalTwins.RaspberryPi.Components.Mocks;
-    using PoC.DigitalTwins.RaspberryPi.Components.Mocks.Models;
+    using PoC.DigitalTwins.RaspberryPi.Models;
 
     public class RangeCalculatorTests
     {
@@ -18,7 +18,7 @@
                 Max = 85
             };
 
-            var result = rangeCalculator.GetValueFromRange(rangeConfig);
+            var result = rangeCalculator.GetValueFromRangeBy(rangeConfig);
             Assert.Equal(rangeConfig.Min, result);
         }
 
@@ -33,7 +33,7 @@
                 Max = 85
             };
 
-            var result = rangeCalculator.GetValueFromRange(rangeConfig);
+            var result = rangeCalculator.GetValueFromRangeBy(rangeConfig);
             Assert.Equal(rangeConfig.Max, result);
         }
 
@@ -57,7 +57,7 @@
             var rangeCalculator = Substitute.For<RangeCalculator>();
             rangeCalculator.GetCoeficientBetween0and1.Returns(coeficient);
 
-            var result = rangeCalculator.GetValueFromRange(rangeConfig);
+            var result = rangeCalculator.GetValueFromRangeBy(rangeConfig);
             Assert.Equal(expected, result);
         }
     }
