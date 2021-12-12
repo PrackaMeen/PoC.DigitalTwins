@@ -8,17 +8,37 @@
 
     public class Setup
     {
+        protected GpioController _gpioControllerLazy = null;
+        private static readonly object _lock = new object();
+
         public Setup(IRaspberryConfig config)
         {
             if (null != config.Meteo)
             {
-                var gpioController = new GpioController(PinNumberingScheme.Logical);
-                Meteostation = new Meteostation(gpioController, config.Meteo.ReadPin);
+                Meteostation = new Meteostation(GpioControllerLazy, config.Meteo.ReadPin);
             }
 
             Meteostation = new MeteostationMock();
         }
 
+        protected GpioController GpioControllerLazy
+        {
+            get
+            {
+                if (_gpioControllerLazy == null)
+                {
+                    lock (_lock)
+                    {
+                        if (_gpioControllerLazy == null)
+                        {
+                            _gpioControllerLazy = new GpioController(PinNumberingScheme.Logical);
+                        }
+                    }
+                }
+
+                return _gpioControllerLazy;
+            }
+        }
         public IMeteostation Meteostation { get; }
     }
 }
