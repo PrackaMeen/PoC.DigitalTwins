@@ -3,7 +3,7 @@
     using PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
     using PoC.DigitalTwins.RaspberryPi.Models;
 
-    public class DHT11 : IThermometer, IHygroscope
+    public class MeteostationMock : IMeteostation
     {
         const double MINIMAL_TEMPERATURE = -35;
         const double MAXIMAL_TEMPERATURE = 45;
@@ -15,7 +15,7 @@
         private readonly RangeConfig _temperatureRange;
         private readonly RangeConfig _humidityRange;
 
-        public DHT11() : this(
+        public MeteostationMock() : this(
             new RandomRangeCalculator(Random.Shared),
             new RangeConfig
             {
@@ -30,7 +30,7 @@
             )
         { }
 
-        public DHT11(
+        public MeteostationMock(
             IRangeCalculator rangeCalculator,
             RangeConfig temperatureRange,
             RangeConfig humidityRange

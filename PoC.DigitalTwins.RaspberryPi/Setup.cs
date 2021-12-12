@@ -1,14 +1,24 @@
 ﻿namespace PoC.DigitalTwins.RaspberryPi
 {
+    using PoC.DigitalTwins.RaspberryPi.Components;
+    using PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
     using PoC.DigitalTwins.RaspberryPi.Components.Mocks;
+    using PoC.DigitalTwins.RaspberryPi.Models;
+    using System.Device.Gpio;
 
     public class Setup
     {
-        public Setup()
+        public Setup(IRaspberryConfig config)
         {
-            DHT11 = new DHT11();
+            if (null != config.Meteo)
+            {
+                var gpioController = new GpioController(PinNumberingScheme.Logical);
+                Meteostation = new Meteostation(gpioController, config.Meteo.ReadPin);
+            }
+
+            Meteostation = new MeteostationMock();
         }
 
-        public DHT11 DHT11 { get; }
+        public IMeteostation Meteostation { get; }
     }
 }

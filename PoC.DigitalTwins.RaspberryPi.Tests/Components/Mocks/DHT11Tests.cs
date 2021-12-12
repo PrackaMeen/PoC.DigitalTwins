@@ -28,7 +28,7 @@
             var rangeCalculator = Substitute.For<RangeCalculator>();
             rangeCalculator.GetCoeficientBetween0and1.Returns(coeficient);
 
-            var dht11 = new DHT11(
+            var dht11 = new MeteostationMock(
                 rangeCalculator, 
                 temperatureRange: temperatureRangeConfig, 
                 humidityRange: humidityRangeConfig
