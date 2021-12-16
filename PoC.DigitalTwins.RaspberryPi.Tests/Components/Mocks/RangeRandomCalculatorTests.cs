@@ -1,4 +1,4 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Tests
+﻿namespace PoC.DigitalTwins.RaspberryPi.Tests.Components.Mocks
 {
     using Xunit;
     using NSubstitute;

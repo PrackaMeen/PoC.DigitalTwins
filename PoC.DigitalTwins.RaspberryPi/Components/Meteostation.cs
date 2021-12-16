@@ -12,15 +12,12 @@
 
     internal class Meteostation : IMeteostation
     {
-        protected int _pinIn;
-        protected int _pinOut;
-        protected int _pinDht11;
         protected Dht11 _dht11;
 
         public Meteostation(GpioController gpioController, int pinDht11)
         {
             _dht11 = new Dht11(
-                _pinDht11, 
+                pinDht11, 
                 pinNumberingScheme: PinNumberingScheme.Logical,
                 gpioController,
                 shouldDispose: false);

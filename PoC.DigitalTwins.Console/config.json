@@ -1,0 +1,8 @@
+{
+  "hostName": "PoCDigitalTwins.api.weu.digitaltwins.azure.net",
+  "raspberryPi": {
+    "meteo": {
+      "readPin": 13
+    }
+  }
+}
