@@ -1,7 +1,6 @@
 ﻿namespace PoC.DigitalTwins.Console
 {
     using PoC.DigitalTwins.RaspberryPi.Models;
-    using System.Text.Json;
     using System.Text.Json.Serialization;
 
     internal class ConsoleConfig
