@@ -1,5 +1,9 @@
 {
-  "hostName": "PoCDigitalTwins.api.weu.digitaltwins.azure.net",
+  "digitalTwins": {
+    "name": "PoCDigitalTwins",
+    "hostName": "PoCDigitalTwins.api.weu.digitaltwins.azure.net",
+    "resourceGroupName": "PoC.DigitalTwins"
+  },
   "raspberryPi": {
     "meteo": {
       "readPin": 13
