@@ -8,8 +8,8 @@
 
     public class Setup
     {
-        protected GpioController _gpioControllerLazy = null;
-        private static readonly object _lock = new object();
+        protected GpioController? _gpioControllerLazy = null;
+        private readonly object _lock = new();
 
         public Setup(IRaspberryConfig config)
         {
