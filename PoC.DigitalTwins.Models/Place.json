@@ -1,0 +1,19 @@
+{
+  "@id": "dtmi:PoC:DigitalTwins:Place;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Place",
+  "extends": "dtmi:PoC:DigitalTwins:CommonProps;1",
+  "contents": [
+    {
+      "@type": "Component",
+      "name": "location",
+      "schema": "dtmi:PoC:DigitalTwins:Location;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "containsRooms",
+      "target": "dtmi:PoC:DigitalTwins:Room;1"
+    }
+  ]
+}

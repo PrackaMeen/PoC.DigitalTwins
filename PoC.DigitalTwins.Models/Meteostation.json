@@ -1,27 +1,19 @@
 {
-  "@id": "dtmi:poc:Meteostation;2",
+  "@id": "dtmi:PoC:DigitalTwins:Meteostation;1",
   "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
   "displayName": "Meteostation",
+  "extends": "dtmi:PoC:DigitalTwins:CommonProps;1",
   "contents": [
     {
-      "@type": "Property",
-      "name": "Temperature",
-      "schema": "double"
+      "@type": "Component",
+      "name": "hygroscope",
+      "schema": "dtmi:PoC:DigitalTwins:Hygroscope;1"
     },
     {
-      "@type": "Property",
-      "name": "Humidity",
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "MeteostationName",
-      "schema": "string"
-    },
-    {
-      "@type": "Relationship",
-      "name": "contains"
+      "@type": "Component",
+      "name": "thermometer",
+      "schema": "dtmi:PoC:DigitalTwins:Thermometer;1"
     }
-  ],
-  "@context": "dtmi:dtdl:context;2"
+  ]
 }

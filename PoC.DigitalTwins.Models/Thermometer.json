@@ -1,0 +1,18 @@
+{
+  "@id": "dtmi:PoC:DigitalTwins:Thermometer;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Thermometer",
+  "extends": "dtmi:PoC:DigitalTwins:CommonProps;1",
+  "contents": [
+    {
+      "@type": [
+        "Telemetry",
+        "Temperature"
+      ],
+      "name": "temperature",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    }
+  ]
+}
