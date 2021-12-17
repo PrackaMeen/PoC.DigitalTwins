@@ -1,11 +1,8 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Models
+﻿namespace PoC.DigitalTwins.RaspberryPi.Models;
+using System.Text.Json.Serialization;
+
+public class RaspberryConfig
 {
-    public interface IRaspberryConfig
-    {
-        public IMeteoConfig? Meteo { get; }
-    }
-    public class RaspberryConfig : IRaspberryConfig
-    {
-        public IMeteoConfig? Meteo { get; set; }
-    }
+    [JsonPropertyName("meteo")]
+    public MeteoConfig Meteo { get; set; } = new();
 }

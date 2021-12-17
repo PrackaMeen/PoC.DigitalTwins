@@ -1,11 +1,11 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Models
+﻿namespace PoC.DigitalTwins.RaspberryPi.Models;
+using System.Text.Json.Serialization;
+
+public class MeteoConfig
 {
-    public interface IMeteoConfig
-    {
-        public int ReadPin { get; }
-    }
-    public class MeteoConfig : IMeteoConfig
-    {
-        public int ReadPin { get; set; }
-    }
+    [JsonPropertyName("readPin")]
+    public int ReadPin { get; set; } = -1;
+
+    [JsonPropertyName("useMock")]
+    public bool UseMock { get; set; } = true;
 }

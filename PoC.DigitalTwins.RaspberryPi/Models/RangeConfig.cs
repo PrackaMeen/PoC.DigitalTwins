@@ -1,8 +1,7 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Models
+﻿namespace PoC.DigitalTwins.RaspberryPi.Models;
+
+public class RangeConfig
 {
-    public class RangeConfig
-    {
-        public double Min { get; set; }
-        public double Max { get; set; }
-    }
+    public double Min { get; set; }
+    public double Max { get; set; }
 }

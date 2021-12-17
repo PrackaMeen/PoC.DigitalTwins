@@ -1,44 +1,39 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi
+﻿namespace PoC.DigitalTwins.RaspberryPi;
+using PoC.DigitalTwins.RaspberryPi.Components;
+using PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
+using PoC.DigitalTwins.RaspberryPi.Components.Mocks;
+using PoC.DigitalTwins.RaspberryPi.Models;
+using System.Device.Gpio;
+
+public class Setup
 {
-    using PoC.DigitalTwins.RaspberryPi.Components;
-    using PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
-    using PoC.DigitalTwins.RaspberryPi.Components.Mocks;
-    using PoC.DigitalTwins.RaspberryPi.Models;
-    using System.Device.Gpio;
+    protected GpioController? _gpioControllerLazy = null;
+    private readonly object _lock = new();
 
-    public class Setup
+    public Setup(RaspberryConfig config)
     {
-        protected GpioController? _gpioControllerLazy = null;
-        private readonly object _lock = new();
+        Meteostation = config.Meteo.UseMock
+            ? new MeteostationMock()
+            : new Meteostation(GpioControllerLazy, config.Meteo.ReadPin);
+    }
 
-        public Setup(IRaspberryConfig config)
+    protected GpioController GpioControllerLazy
+    {
+        get
         {
-            if (null != config.Meteo)
+            if (_gpioControllerLazy == null)
             {
-                Meteostation = new Meteostation(GpioControllerLazy, config.Meteo.ReadPin);
-            }
-
-            Meteostation = new MeteostationMock();
-        }
-
-        protected GpioController GpioControllerLazy
-        {
-            get
-            {
-                if (_gpioControllerLazy == null)
+                lock (_lock)
                 {
-                    lock (_lock)
+                    if (_gpioControllerLazy == null)
                     {
-                        if (_gpioControllerLazy == null)
-                        {
-                            _gpioControllerLazy = new GpioController(PinNumberingScheme.Logical);
-                        }
+                        _gpioControllerLazy = new GpioController(PinNumberingScheme.Logical);
                     }
                 }
-
-                return _gpioControllerLazy;
             }
+
+            return _gpioControllerLazy;
         }
-        public IMeteostation Meteostation { get; }
     }
+    public IMeteostation Meteostation { get; }
 }

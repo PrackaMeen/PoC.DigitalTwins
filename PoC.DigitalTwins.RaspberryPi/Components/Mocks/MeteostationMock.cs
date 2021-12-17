@@ -1,71 +1,69 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Mocks
+﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Mocks;
+using PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
+using PoC.DigitalTwins.RaspberryPi.Models;
+
+public class MeteostationMock : IMeteostation
 {
-    using PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
-    using PoC.DigitalTwins.RaspberryPi.Models;
+    const double MINIMAL_TEMPERATURE = -35;
+    const double MAXIMAL_TEMPERATURE = 45;
 
-    public class MeteostationMock : IMeteostation
+    const double MINIMAL_HUMIDITY = 20;
+    const double MAXIMAL_HUMIDITY = 95;
+
+    private readonly IRangeCalculator _rangeCalculator;
+    private readonly RangeConfig _temperatureRange;
+    private readonly RangeConfig _humidityRange;
+
+    public MeteostationMock() : this(
+        new RandomRangeCalculator(Random.Shared),
+        new RangeConfig
+        {
+            Max = MAXIMAL_TEMPERATURE,
+            Min = MINIMAL_TEMPERATURE,
+        },
+        new RangeConfig
+        {
+            Max = MAXIMAL_HUMIDITY,
+            Min = MINIMAL_HUMIDITY,
+        }
+        )
+    { }
+
+    public MeteostationMock(
+        IRangeCalculator rangeCalculator,
+        RangeConfig temperatureRange,
+        RangeConfig humidityRange
+        )
     {
-        const double MINIMAL_TEMPERATURE = -35;
-        const double MAXIMAL_TEMPERATURE = 45;
+        _temperatureRange = temperatureRange;
+        _humidityRange = humidityRange;
+        _rangeCalculator = rangeCalculator;
+    }
 
-        const double MINIMAL_HUMIDITY = 20;
-        const double MAXIMAL_HUMIDITY = 95;
+    public double GetTemperatureInCelsius()
+    {
+        return _rangeCalculator.GetValueFromRangeBy(_temperatureRange);
+    }
 
-        private readonly IRangeCalculator _rangeCalculator;
-        private readonly RangeConfig _temperatureRange;
-        private readonly RangeConfig _humidityRange;
+    public double GetHumidityInPercent()
+    {
+        return _rangeCalculator.GetValueFromRangeBy(_humidityRange);
+    }
 
-        public MeteostationMock() : this(
-            new RandomRangeCalculator(Random.Shared),
-            new RangeConfig
-            {
-                Max = MAXIMAL_TEMPERATURE,
-                Min = MINIMAL_TEMPERATURE,
-            },
-            new RangeConfig
-            {
-                Max = MAXIMAL_HUMIDITY,
-                Min = MINIMAL_HUMIDITY,
-            }
-            )
-        { }
+    public double GetHumidity()
+    {
+        return GetHumidityInPercent();
+    }
 
-        public MeteostationMock(
-            IRangeCalculator rangeCalculator,
-            RangeConfig temperatureRange,
-            RangeConfig humidityRange
-            )
-        {
-            _temperatureRange = temperatureRange;
-            _humidityRange = humidityRange;
-            _rangeCalculator = rangeCalculator;
-        }
+    public double GetTemperature()
+    {
+        return GetTemperatureInCelsius();
+    }
 
-        public double GetTemperatureInCelsius()
-        {
-            return _rangeCalculator.GetValueFromRangeBy(_temperatureRange);
-        }
-
-        public double GetHumidityInPercent()
-        {
-            return _rangeCalculator.GetValueFromRangeBy(_humidityRange);
-        }
-
-        public double GetHumidity()
-        {
-            return GetHumidityInPercent();
-        }
-
-        public double GetTemperature()
-        {
-            return GetTemperatureInCelsius();
-        }
-
-        public override string ToString()
-        {
-            var formattedTemperature = String.Format("{0:0.00}", GetTemperature());
-            var formattedHumidity = String.Format("{0:0.00}", GetHumidity());
-            return $"Temperature: {formattedTemperature}°C, Humidity: {formattedHumidity}%";
-        }
+    public override string ToString()
+    {
+        var formattedTemperature = String.Format("{0:0.00}", GetTemperature());
+        var formattedHumidity = String.Format("{0:0.00}", GetHumidity());
+        return $"Temperature: {formattedTemperature}°C, Humidity: {formattedHumidity}%";
     }
 }

@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using PoC.DigitalTwins.Console;
+using PoC.DigitalTwins.Console.Models;
 using PoC.DigitalTwins.RaspberryPi;
 using System.Text.Json;
 
@@ -16,10 +16,23 @@ try
 }
 catch (JsonException ex) { Console.WriteLine($"Invalid Json Format: {ex.Message}"); }
 catch (FileNotFoundException ex) { Console.WriteLine($"FileNotFoundException: {ex.Message}"); }
+finally
+{
+    config ??= new ConsoleConfig
+    {
+        RaspberryPi = new RaspberryConfigBuilder().Build()
+    };
 
-var raspberryConfig = config?.RaspberryPi ?? new RaspberryConfigBuilder().Build();
+    Console.WriteLine($"Values used for config:");
+    var serializedJson = JsonSerializer.Serialize(config, new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true,
+    });
+    Console.WriteLine(serializedJson);
+}
 
-Setup raspberryPi = new(raspberryConfig);
+Setup raspberryPi = new(config.RaspberryPi);
 
 bool isESC = false;
 while (!isESC)

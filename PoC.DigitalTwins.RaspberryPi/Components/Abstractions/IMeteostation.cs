@@ -1,12 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
 
-namespace PoC.DigitalTwins.RaspberryPi.Components.Abstractions
-{
-    public interface IMeteostation: IHygroscope, IThermometer
-    {
-    }
-}
+public interface IMeteostation : IHygroscope, IThermometer { }

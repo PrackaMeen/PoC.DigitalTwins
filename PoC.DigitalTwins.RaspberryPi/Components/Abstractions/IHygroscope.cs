@@ -1,7 +1,6 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Abstractions
+﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
+
+public interface IHygroscope
 {
-    public interface IHygroscope
-    {
-        double GetHumidity();
-    }
+    double GetHumidity();
 }

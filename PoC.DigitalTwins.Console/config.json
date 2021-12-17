@@ -6,7 +6,8 @@
   },
   "raspberryPi": {
     "meteo": {
-      "readPin": 13
+      "readPin": 13,
+      "useMock": true
     }
   }
 }

@@ -1,7 +1,6 @@
-﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Abstractions
+﻿namespace PoC.DigitalTwins.RaspberryPi.Components.Abstractions;
+
+public interface IThermometer
 {
-    public interface IThermometer
-    {
-        double GetTemperature();
-    }
+    double GetTemperature();
 }
