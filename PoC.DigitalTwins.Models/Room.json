@@ -14,17 +14,17 @@
     {
       "@type": "Relationship",
       "name": "containsMeteostations",
-      "target": "dtmi:com:example:Meteostation;1"
+      "target": "dtmi:PoC:DigitalTwins:Meteostation;1"
     },
     {
       "@type": "Relationship",
       "name": "containsThermometers",
-      "target": "dtmi:com:example:Thermometer;1"
+      "target": "dtmi:PoC:DigitalTwins:Thermometer;1"
     },
     {
       "@type": "Relationship",
       "name": "containsHygroscopes",
-      "target": "dtmi:com:example:Hygroscope;1"
+      "target": "dtmi:PoC:DigitalTwins:Hygroscope;1"
     }
   ]
 }
