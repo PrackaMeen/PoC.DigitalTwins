@@ -34,12 +34,19 @@ finally
 
 Setup raspberryPi = new(config.RaspberryPi);
 
-bool isESC = false;
-while (!isESC)
+bool shouldShowValues(DateTime lastTimeCheck)
 {
-    Console.WriteLine(raspberryPi.Meteostation);
-    var key = Console.ReadKey();
-    isESC = ConsoleKey.Escape == key.Key;
+    return lastTimeCheck + new TimeSpan(0, 0, config.DataReadIntervalInSeconds) < DateTime.UtcNow;
+}
+
+var lastTimeCheck = DateTime.UtcNow;
+while (true)
+{
+    if (shouldShowValues(lastTimeCheck))
+    {
+        Console.WriteLine(raspberryPi.Meteostation);
+        lastTimeCheck = DateTime.UtcNow;
+    }
 }
 
 Console.WriteLine("Thank you for usage...");

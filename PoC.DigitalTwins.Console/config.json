@@ -9,5 +9,6 @@
       "readPin": 13,
       "useMock": true
     }
-  }
+  },
+  "dataReadIntervalInSeconds": 2
 }

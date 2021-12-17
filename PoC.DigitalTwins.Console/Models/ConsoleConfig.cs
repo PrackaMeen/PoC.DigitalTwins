@@ -9,5 +9,8 @@ internal class ConsoleConfig
 
     [JsonPropertyName("raspberryPi")]
     public RaspberryConfig RaspberryPi { get; set; } = new RaspberryConfig();
+
+    [JsonPropertyName("dataReadIntervalInSeconds")]
+    public int DataReadIntervalInSeconds { get; set; } = 1;
 }
 
