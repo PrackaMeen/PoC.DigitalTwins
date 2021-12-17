@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:poc:Meteostation;1",
+  "@id": "dtmi:poc:Meteostation;2",
   "@type": "Interface",
   "displayName": "Meteostation",
   "contents": [
@@ -15,7 +15,7 @@
     },
     {
       "@type": "Property",
-      "name": "RoomName",
+      "name": "MeteostationName",
       "schema": "string"
     },
     {
