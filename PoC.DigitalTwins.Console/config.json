@@ -1,7 +1,7 @@
 {
   "digitalTwins": {
     "name": "PoCDigitalTwins",
-    "hostName": "PoCDigitalTwins.api.weu.digitaltwins.azure.net",
+    "hostName": "https://PoCDigitalTwins.api.weu.digitaltwins.azure.net",
     "resourceGroupName": "PoC.DigitalTwins"
   },
   "raspberryPi": {
