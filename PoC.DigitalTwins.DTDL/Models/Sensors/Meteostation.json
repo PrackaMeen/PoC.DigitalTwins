@@ -2,7 +2,10 @@
   "@id": "dtmi:PoC:DigitalTwins:Meteostation;1",
   "@type": "Interface",
   "@context": "dtmi:dtdl:context;2",
-  "displayName": "Meteostation",
+  "displayName": {
+    "en": "Meteostation",
+    "sk": "Meteostanica"
+  },
   "extends": "dtmi:PoC:DigitalTwins:CommonProps;1",
   "contents": [
     {

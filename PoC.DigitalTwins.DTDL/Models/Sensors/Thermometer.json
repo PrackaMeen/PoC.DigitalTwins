@@ -1,18 +1,21 @@
 {
-  "@id": "dtmi:PoC:DigitalTwins:Hygroscope;1",
+  "@id": "dtmi:PoC:DigitalTwins:Thermometer;1",
   "@type": "Interface",
   "@context": "dtmi:dtdl:context;2",
-  "displayName": "Hygroscope",
+  "displayName": {
+    "en": "Thermometer",
+    "sk": "Teplomer"
+  },
   "extends": "dtmi:PoC:DigitalTwins:CommonProps;1",
   "contents": [
     {
       "@type": [
         "Telemetry",
-        "RelativeHumidity"
+        "Temperature"
       ],
-      "name": "humidity",
+      "name": "temperature",
       "schema": "double",
-      "unit": "percent"
+      "unit": "degreeCelsius"
     }
   ]
 }

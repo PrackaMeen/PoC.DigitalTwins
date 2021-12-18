@@ -1,0 +1,23 @@
+{
+  "@id": "dtmi:PoC:DigitalTwins:Light;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": {
+    "en": "Light",
+    "sk": "Svetlo"
+  },
+  "extends": "dtmi:PoC:DigitalTwins:CommonProps;1",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "setSwichState",
+      "writable": true,
+      "schema": "dtmi:PoC:DigitalTwins:Enums:Switch;1"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "switchState",
+      "schema": "dtmi:PoC:DigitalTwins:Enums:Switch;1"
+    }
+  ]
+}

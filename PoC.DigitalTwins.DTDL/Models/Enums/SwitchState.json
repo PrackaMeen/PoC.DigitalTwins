@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:PoC:DigitalTwins:Switch;1",
+  "@context": "dtmi:dtdl:context;2",
+  "@type": "Enum",
+  "displayName": {
+    "en": "Switch",
+    "sk": "Vypinac"
+  },
+  "valueSchema": "integer",
+  "enumValues": [
+    {
+      "name": "on",
+      "displayName": "On",
+      "enumValue": 1
+    },
+    {
+      "name": "off",
+      "displayName": "Off",
+      "enumValue": 0
+    }
+  ]
+}
