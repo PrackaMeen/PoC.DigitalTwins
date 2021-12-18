@@ -39,14 +39,25 @@ bool shouldShowValues(DateTime lastTimeCheck)
     return lastTimeCheck + new TimeSpan(0, 0, config.DataReadIntervalInSeconds) < DateTime.UtcNow;
 }
 
-var lastTimeCheck = DateTime.UtcNow;
-while (true)
+async Task DisplayValuesAsync(CancellationTokenSource cancellationTokenSource)
 {
-    if (shouldShowValues(lastTimeCheck))
+    var lastTimeCheck = DateTime.UtcNow;
+    while (!cancellationTokenSource.IsCancellationRequested)
     {
-        Console.WriteLine(raspberryPi.Meteostation);
-        lastTimeCheck = DateTime.UtcNow;
+        if (shouldShowValues(lastTimeCheck))
+        {
+            Console.WriteLine(raspberryPi.Meteostation);
+            lastTimeCheck = DateTime.UtcNow;
+        }
     }
+
+    return;
 }
 
+var token = new CancellationTokenSource();
+Task.Run(() => DisplayValuesAsync(token));
+
+Console.WriteLine("Click any key to exit...");
+var key = Console.ReadKey(true);
+token.Cancel();
 Console.WriteLine("Thank you for usage...");
