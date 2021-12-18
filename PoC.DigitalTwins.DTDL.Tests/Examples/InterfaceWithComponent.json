@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:tests:InterfaceWithComponent;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "displayName",
+  "contents": [
+    {
+      "@type": "Component",
+      "name": "prop1",
+      "schema": {
+        "@id": "dtmi:tests:ComponentToUse;1",
+        "@type": "Interface",
+        "@context": "dtmi:dtdl:context;2",
+        "contents": [
+          {
+            "@type": "Property",
+            "name": "prop1",
+            "schema": "double",
+            "writable": false
+          }
+        ]
+      }
+    }
+  ]
+}

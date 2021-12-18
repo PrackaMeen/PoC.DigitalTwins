@@ -1,0 +1,32 @@
+{
+  "@id": "dtmi:tests:InterfaceWithEnum;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "displayName",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "prop1",
+      "schema": "dtmi:tests:Enum;1"
+    }
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:tests:Enum;1",
+      "@type": "Enum",
+      "valueSchema": "integer",
+      "enumValues": [
+        {
+          "name": "offline",
+          "displayName": "Offline",
+          "enumValue": 1
+        },
+        {
+          "name": "online",
+          "displayName": "Online",
+          "enumValue": 2
+        }
+      ]
+    }
+  ]
+}

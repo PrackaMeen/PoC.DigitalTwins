@@ -1,0 +1,18 @@
+{
+  "@id": "dtmi:tests:Enum;1",
+  "@context": "dtmi:dtdl:context;2",
+  "@type": "Enum",
+  "valueSchema": "string",
+  "enumValues": [
+    {
+      "name": "offline",
+      "displayName": "Offline",
+      "enumValue": "offline"
+    },
+    {
+      "name": "online",
+      "displayName": "Online",
+      "enumValue": "online"
+    }
+  ]
+}

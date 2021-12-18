@@ -1,0 +1,15 @@
+{
+  "valueSchema": "string",
+  "enumValues": [
+    {
+      "name": "offline",
+      "displayName": "Offline",
+      "enumValue": "offline"
+    },
+    {
+      "name": "online",
+      "displayName": "Online",
+      "enumValue": "online"
+    }
+  ]
+}

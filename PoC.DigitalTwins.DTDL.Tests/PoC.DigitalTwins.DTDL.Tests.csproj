@@ -1,0 +1,185 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Examples\Enum.json" />
+    <None Remove="Examples\Interface.json" />
+    <None Remove="Examples\InterfaceDependentEnum.json" />
+    <None Remove="Examples\InterfaceExtendsWithProperty.json" />
+    <None Remove="Examples\InterfaceWithComponent.json" />
+    <None Remove="Examples\InterfaceWithEnum.json" />
+    <None Remove="Examples\InterfaceWithProperties.json" />
+    <None Remove="Examples\InterfaceWithPropertyAndRelationship.json" />
+    <None Remove="Examples\InvalidDTDL.json" />
+    <None Remove="Examples\InvalidJSON.json" />
+    <None Remove="Examples\PropertyEnum.json" />
+    <None Remove="Examples\TelemetryEnum.json" />
+    <None Remove="Examples\ValidJSON.json" />
+    <None Remove="Tests\Folder2\File1.json" />
+    <None Remove="Tests\Folder2\File2.json" />
+    <None Remove="Tests\Folder2\File3.json" />
+    <None Remove="Tests\Folder2\File4.json" />
+    <None Remove="Tests\Folder2\File5.json" />
+    <None Remove="Tests\Folder1\File1.json" />
+    <None Remove="Tests\Folder1\File2.json" />
+    <None Remove="Tests\Folder1\File3.json" />
+    <None Remove="Tests\Folder1\File4.json" />
+    <None Remove="Tests\Folder1\File5.json" />
+    <None Remove="Tests\Folder2\Folder1\File1.json" />
+    <None Remove="Tests\Folder2\Folder1\File2.json" />
+    <None Remove="Tests\Folder2\Folder1\File3.json" />
+    <None Remove="Tests\Folder2\Folder1\File4.json" />
+    <None Remove="Tests\Folder2\Folder1\File5.json" />
+    <None Remove="Tests\Folder2\Folder2\File1.json" />
+    <None Remove="Tests\Folder2\Folder2\File2.json" />
+    <None Remove="Tests\Folder2\Folder2\File3.json" />
+    <None Remove="Tests\Folder2\Folder2\File4.json" />
+    <None Remove="Tests\Folder2\Folder2\File5.json" />
+    <None Remove="Tests\Folder2\Folder2\Folder1\File1.json" />
+    <None Remove="Tests\Folder2\Folder2\Folder1\File2.json" />
+    <None Remove="Tests\Folder2\Folder2\Folder1\File3.json" />
+    <None Remove="Tests\Folder2\Folder2\Folder1\File4.json" />
+    <None Remove="Tests\Folder2\Folder2\Folder1\File5.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Examples\ValidJSON.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InvalidJSON.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InvalidDTDL.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InterfaceWithEnum.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InterfaceWithComponent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InterfaceWithPropertyAndRelationship.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InterfaceExtendsWithProperty.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InterfaceWithProperties.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\Enum.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\PropertyEnum.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\InterfaceDependentEnum.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\TelemetryEnum.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\Interface.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\File1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\File2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\File3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\File4.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\File5.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder1\File5.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder1\File2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder1\File3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder1\File4.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder1\File1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder1\File1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder1\File2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder1\File3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder1\File4.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder1\File5.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\File1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\File2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\File3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\File4.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\File5.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\Folder1\File1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\Folder1\File2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\Folder1\File3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\Folder1\File4.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tests\Folder2\Folder2\Folder1\File5.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PoC.DigitalTwins.DTDL\PoC.DigitalTwins.DTDL.csproj" />
+  </ItemGroup>
+
+</Project>

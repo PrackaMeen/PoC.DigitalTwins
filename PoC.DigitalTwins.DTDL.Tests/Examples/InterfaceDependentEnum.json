@@ -1,0 +1,13 @@
+{
+  "@id": "dtmi:tests:InterfaceDependentEnum;1",
+  "@context": "dtmi:dtdl:context;2",
+  "@type": "Interface",
+  "displayName": "state",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "enumProp1",
+      "schema": "dtmi:tests:Enum;1"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:tests:TelemetryEnum;1",
+  "@context": "dtmi:dtdl:context;2",
+  "@type": "Telemetry",
+  "name": "state",
+  "schema": {
+    "@type": "Enum",
+    "valueSchema": "integer",
+    "enumValues": [
+      {
+        "name": "offline",
+        "displayName": "Offline",
+        "enumValue": 1
+      },
+      {
+        "name": "online",
+        "displayName": "Online",
+        "enumValue": 2
+      }
+    ]
+  }
+}

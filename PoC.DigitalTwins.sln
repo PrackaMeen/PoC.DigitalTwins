@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.DigitalTwins.RaspberryP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.DigitalTwins.RaspberryPi.Tests", "PoC.DigitalTwins.RaspberryPi.Tests\PoC.DigitalTwins.RaspberryPi.Tests.csproj", "{B683C73C-991D-433C-B9F4-79634DB96DEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.Functions", "PoC.DigitalTwins.Functions\PoC.DigitalTwins.Functions.csproj", "{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.DigitalTwins.Functions", "PoC.DigitalTwins.Functions\PoC.DigitalTwins.Functions.csproj", "{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.DTDL", "PoC.DigitalTwins.DTDL\PoC.DigitalTwins.DTDL.csproj", "{4756FC1E-B492-4B3E-9D1F-D07D32CFF65B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.DigitalTwins.DTDL.Tests", "PoC.DigitalTwins.DTDL.Tests\PoC.DigitalTwins.DTDL.Tests.csproj", "{5A1C1975-B456-4587-8815-41075F43BD38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD16E634-1D6D-428E-8DA8-DBB9A6B5303C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4756FC1E-B492-4B3E-9D1F-D07D32CFF65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4756FC1E-B492-4B3E-9D1F-D07D32CFF65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4756FC1E-B492-4B3E-9D1F-D07D32CFF65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4756FC1E-B492-4B3E-9D1F-D07D32CFF65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1C1975-B456-4587-8815-41075F43BD38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1C1975-B456-4587-8815-41075F43BD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1C1975-B456-4587-8815-41075F43BD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1C1975-B456-4587-8815-41075F43BD38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

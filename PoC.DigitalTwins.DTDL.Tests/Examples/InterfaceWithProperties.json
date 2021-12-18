@@ -1,0 +1,28 @@
+{
+  "@id": "dtmi:tests:InterfaceWithProperties;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "displayName",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "prop1",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "prop2",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "prop3",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "prop4",
+      "schema": "boolean"
+    }
+  ]
+}
