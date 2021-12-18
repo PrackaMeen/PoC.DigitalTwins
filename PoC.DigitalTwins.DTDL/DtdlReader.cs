@@ -28,14 +28,19 @@ public class DtdlReader
     public static IEnumerable<string> GetAllJsonFilesPathsFromDirectory(string directoryFullPath)
     {
         List<string> allFilePaths = new();
-        if (Directory.Exists(directoryFullPath))
-        {
-            foreach (var directoryPath in Directory.GetDirectories(directoryFullPath))
-            {
-                allFilePaths.AddRange(GetAllJsonFilesPathsFromDirectory(directoryPath));
-            }
 
-            allFilePaths.AddRange(Directory.GetFiles(directoryFullPath, "*.json"));
+        DirectoryInfo directoryInfo = new(directoryFullPath);
+        if (directoryInfo.Exists)
+        {
+            foreach (var fullFilePath in directoryInfo.EnumerateFiles("*.json", SearchOption.AllDirectories))
+            {
+                allFilePaths.Add(fullFilePath.FullName);
+            }
+        }
+
+        if (allFilePaths.Count < 1)
+        {
+            throw new ArgumentException("Folder specified by directoryFullPath does not exist or do not contains any DTDL files (*.json)...");
         }
 
         return allFilePaths;

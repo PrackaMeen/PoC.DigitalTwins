@@ -5,6 +5,7 @@ using Xunit;
 using Microsoft.Azure.DigitalTwins.Parser;
 using System.IO;
 using System.Linq;
+using System;
 
 public class DtdlParserTests
 {
@@ -118,11 +119,17 @@ public class DtdlParserTests
     }
 
     [Fact]
-    public async Task LoadAllDtdlsFrom()
+    public async Task LoadAllDtdlsFrom_Tests_Folder_Recursively()
     {
         var allSerializedDtdls = await DtdlReader.LoadAllDtdlsFrom(Path.Combine("./", "Tests"));
 
         Assert.NotEmpty(allSerializedDtdls);
         Assert.Equal(25, allSerializedDtdls.Count());
+    }
+
+    [Fact]
+    public async Task LoadAllDtdlsFrom_Nonexisted_Folder_Throw_ArgumentException()
+    {
+        await Assert.ThrowsAsync<ArgumentException>(async () => await DtdlReader.LoadAllDtdlsFrom(Path.Combine("./", "Nonexisted")));
     }
 }
